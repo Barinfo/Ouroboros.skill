@@ -1,0 +1,63 @@
+{
+  "name": "Ouroboros.skill",
+  "version": "1.0.0",
+  "description": "The recursive wake-up driver for autonomous agents — NOT a code reviewer. Holds one long-term GOAL so work survives across turns, fans work out to SUB-AGENTS (delegating code review to Camelot and threading the verdict back), and arms a TIMER so an idle or lazy agent wakes itself up and keeps working until the goal is actually met. The ouroboros that bites its own tail: an endless working loop that, fed right, actually reaches completion. 递归唤醒驱动：让 agent 一直干活、停了自己叫醒自己，直到目标完成；需要审代码时调用 Camelot。",
+  "description_zh": "面向自主 agent 的递归唤醒驱动技能（不是代码审查器）。三大引擎：goal（长期目标，跨轮常存、中断可续）、sub-agent（分工；需要代码裁决时派运行 Camelot 的子代理并把结果接回主 context）、timer（定时自醒——agent 没完成任务就偷懒/停摆时会自己叫醒自己继续干）。需要审代码时调用 Camelot，自己不审。目标是让 agent 持续工作到真正完成，而不是等人类来戳。",
+  "author": "FuCube",
+  "license": "MIT",
+  "main": "SKILL.md",
+  "language": "en (skill voice); zh-CN (README default)",
+  "not_a_reviewer": "Ouroboros never reviews code itself. Code judgment is delegated to Camelot.skill via a sub-agent; the verdict is threaded back into the main agent's goal context.",
+  "triggers": [
+    "keep working",
+    "wake me up if I stop",
+    "don't let the task die",
+    "long-running goal",
+    "autonomous loop",
+    "recursive driver",
+    "sub-agent delegation",
+    "timer self-wake",
+    "一直干活",
+    "别让任务停下",
+    "偷懒叫醒",
+    "长期目标",
+    "递归驱动"
+  ],
+  "keywords": [
+    "ouroboros",
+    "recursive",
+    "driver",
+    "wake-up",
+    "goal",
+    "long-running-goal",
+    "sub-agent",
+    "subagent",
+    "timer",
+    "self-wake",
+    "autonomous",
+    "agentic",
+    "orchestration",
+    "camelot",
+    "skill",
+    "递归驱动",
+    "长期目标",
+    "定时自醒",
+    "子代理"
+  ],
+  "engines": {
+    "goal": "hold one long-term objective; resume from last committed progress after interruption",
+    "sub_agent": "fan work out; delegate code review to a sub-agent running Camelot, thread the verdict back",
+    "timer": "self-wake: if the agent stops or goes idle before the goal is met, wake it up and continue"
+  },
+  "companion": {
+    "self": "Ouroboros drives recursion — it keeps the agent working, delegates, and self-wakes.",
+    "camelot": "https://github.com/Barinfo/Camelot.skill — the judge. Ouroboros delegates code review to Camelot (via sub-agent) instead of reviewing itself.",
+    "delivery_gate": "https://github.com/Chen-Clark/pre-delivery-selfcheck — optional third gate (D1–D12) for honest sends."
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "README.en.md",
+    "assets/snake.png"
+  ]
+}
